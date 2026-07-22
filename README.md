@@ -75,7 +75,7 @@ skillhub search suki
 skillhub install suki --dir ~/.agents/skills   # 目录按你的 Agent 改
 ```
 
-审核通过后可在 [skillhub.cn](https://www.skillhub.cn/) 搜索。人设包无图片，商店安装即完整；斗图仍需另装 agent-expression（图包走 GitHub）。
+可在 [skillhub.cn](https://www.skillhub.cn/) 搜索安装。人设包无图片，商店安装即完整；斗图仍需另装 agent-expression（图包走 GitHub）。
 
 ### skills.sh / ClawHub
 
