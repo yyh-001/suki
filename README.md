@@ -11,7 +11,6 @@
   <a href="https://skills.sh/yyh-001/suki"><img src="https://img.shields.io/badge/skills.sh-yyh--001%2Fsuki-black?style=flat-square" alt="skills.sh" /></a>
   <a href="https://clawhub.ai"><img src="https://img.shields.io/badge/ClawHub-suki-orange?style=flat-square" alt="ClawHub" /></a>
   <a href="https://www.skillhub.cn/"><img src="https://img.shields.io/badge/SkillHub-suki-00a4ff?style=flat-square" alt="SkillHub" /></a>
-  <a href="https://qm.qq.com/q/993579665"><img src="https://img.shields.io/badge/QQ群-993579665-12b7f5?style=flat-square" alt="QQ群" /></a>
   <img src="https://img.shields.io/badge/Host-agnostic-informational?style=flat-square" alt="Host agnostic" />
   <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="MIT" /></a>
 </p>
@@ -24,7 +23,7 @@
 不绑定 Hermes / Cursor；任意支持 `SKILL.md` 的 Agent 都能用。  
 本仓库**不含**真实用户隐私；`用户画像` 是模板，请自行改写。
 
-交流 / 反馈：**QQ 群 [993579665](https://qm.qq.com/q/993579665)**
+交流 / 反馈：**QQ 群 `993579665`**（打开 QQ 搜索群号加入）
 
 ## 和表情包的关系
 
