@@ -47,11 +47,21 @@ hermes skills install https://raw.githubusercontent.com/yyh-001/suki/main/SKILL.
 装到 `~/.hermes/skills/persona/suki/`。  
 可选：用本仓 [`SOUL.md`](./SOUL.md) / [`prefill_suki.json`](./prefill_suki.json) 接到 Hermes 人格，然后重启 gateway。
 
-需要斗图时再装表情包（图包约 80MB，用脚本，不要只装 SKILL.md URL）：
+需要斗图时再装表情包（精简预置包约 2.5MB，用脚本/Git，不要只装 SKILL.md URL）：
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/yyh-001/agent-expression/main/install.sh | bash -s -- --hermes
 ```
+
+### OpenClaw（龙虾）
+
+```bash
+openclaw skills install @yyh-001/suki
+# 或：
+clawhub install suki
+```
+
+装完请新开会话。斗图另装 [agent-expression](https://github.com/yyh-001/agent-expression)（`openclaw skills install @yyh-001/agent-expression`，要图包用 Git / `install.sh`）。
 
 ### skills.sh / ClawHub
 
@@ -59,9 +69,7 @@ curl -fsSL https://raw.githubusercontent.com/yyh-001/agent-expression/main/insta
 npx skills add yyh-001/suki
 # 目录页：https://skills.sh/yyh-001/suki
 
-# ClawHub（OpenClaw / Hermes 生态）
 clawhub install suki
-# 或：hermes skills search suki --source clawhub
 ```
 
 ### Cursor / Claude / Codex 等
