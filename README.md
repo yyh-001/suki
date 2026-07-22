@@ -53,11 +53,15 @@ hermes skills install https://raw.githubusercontent.com/yyh-001/suki/main/SKILL.
 curl -fsSL https://raw.githubusercontent.com/yyh-001/agent-expression/main/install.sh | bash -s -- --hermes
 ```
 
-### skills.sh / 通用 CLI
+### skills.sh / ClawHub
 
 ```bash
 npx skills add yyh-001/suki
 # 目录页：https://skills.sh/yyh-001/suki
+
+# ClawHub（OpenClaw / Hermes 生态）
+clawhub install suki
+# 或：hermes skills search suki --source clawhub
 ```
 
 ### Cursor / Claude / Codex 等
