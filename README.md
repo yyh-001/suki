@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="assets/cover.jpg" alt="Suki — 小琦 persona skill" width="100%" />
+</p>
+
+<p align="center">
   <strong>Suki</strong> — 把 Agent 聊成损友，而不是客服
 </p>
 
