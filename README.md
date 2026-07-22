@@ -9,6 +9,8 @@
 <p align="center">
   <a href="./SKILL.md"><img src="https://img.shields.io/badge/Skill-suki-pink?style=flat-square" alt="Skill" /></a>
   <a href="https://skills.sh/yyh-001/suki"><img src="https://img.shields.io/badge/skills.sh-yyh--001%2Fsuki-black?style=flat-square" alt="skills.sh" /></a>
+  <a href="https://clawhub.ai"><img src="https://img.shields.io/badge/ClawHub-suki-orange?style=flat-square" alt="ClawHub" /></a>
+  <a href="https://www.skillhub.cn/"><img src="https://img.shields.io/badge/SkillHub-suki-00a4ff?style=flat-square" alt="SkillHub" /></a>
   <img src="https://img.shields.io/badge/Host-agnostic-informational?style=flat-square" alt="Host agnostic" />
   <a href="./LICENSE"><img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="MIT" /></a>
 </p>
@@ -62,6 +64,16 @@ clawhub install suki
 ```
 
 装完请新开会话。斗图另装 [agent-expression](https://github.com/yyh-001/agent-expression)（`openclaw skills install @yyh-001/agent-expression`，要图包用 Git / `install.sh`）。
+
+### 腾讯 SkillHub（国内）
+
+```bash
+curl -fsSL https://skillhub.cn/install/install.sh | bash -s -- --cli-only
+skillhub search suki
+skillhub install suki --dir ~/.agents/skills   # 目录按你的 Agent 改
+```
+
+审核通过后可在 [skillhub.cn](https://www.skillhub.cn/) 搜索。人设包无图片，商店安装即完整；斗图仍需另装 agent-expression（图包走 GitHub）。
 
 ### skills.sh / ClawHub
 
