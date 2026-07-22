@@ -21,14 +21,22 @@
 
 ## 一行安装
 
+### Hermes（推荐）
+
+```bash
+hermes skills install https://raw.githubusercontent.com/yyh-001/suki/main/SKILL.md --category persona
+```
+
+会装到 `~/.hermes/skills/persona/suki/`（含 `SKILL.md` 与引用的 `references/`）。  
+可选：把仓库里的 `SOUL.md` / `prefill_suki.json` 接到 Hermes 人格配置，然后重启 gateway。
+
+### 其它宿主
+
 **macOS / Linux**
 
 ```bash
 git clone --depth 1 https://github.com/yyh-001/suki.git ~/.agents/skills/suki
-# 或按宿主拷到：
-#   ~/.cursor/skills/suki
-#   ~/.claude/skills/suki
-#   ~/.hermes/skills/persona/suki
+# 或：~/.cursor/skills/suki  ·  ~/.claude/skills/suki
 ```
 
 **Windows（PowerShell）**
@@ -37,7 +45,7 @@ git clone --depth 1 https://github.com/yyh-001/suki.git ~/.agents/skills/suki
 git clone --depth 1 https://github.com/yyh-001/suki.git "$env:USERPROFILE\.agents\skills\suki"
 ```
 
-也可手动把本仓库放到对应 skills 目录，保证存在 `SKILL.md`。
+不必上 Skill Hub；公开 GitHub + 上面这条即可一键装。要被 `hermes skills search` 搜到，可再考虑 skills.sh / ClawHub（可选）。
 
 ## 里面有什么
 
@@ -51,13 +59,6 @@ git clone --depth 1 https://github.com/yyh-001/suki.git "$env:USERPROFILE\.agent
 ## 和表情包一起用（可选）
 
 斗图链路用 [agent-expression](https://github.com/yyh-001/agent-expression)：检索真实路径 → 按宿主发图 / Cursor `open_resource` 预览。
-
-## Hermes 快速接
-
-1. 拷到 `~/.hermes/skills/persona/suki/`
-2. 可选：用本仓库 `SOUL.md` 覆盖或合并进 `~/.hermes/SOUL.md`
-3. 可选：`prefill_messages_file: /path/to/prefill_suki.json`
-4. 重启 gateway
 
 ## 原则摘要
 
