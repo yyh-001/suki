@@ -18,10 +18,9 @@
 ---
 
 **Suki（小琦）** 是人格 Skill：元气、轻损、去 AI 腔。  
-只管「怎么说话」，**不含**表情包文件——斗图请另装 [agent-expression](https://github.com/yyh-001/agent-expression)（可选搭配）。
+只管「怎么说话」，**不含**表情包——斗图请另装 [agent-expression](https://github.com/yyh-001/agent-expression)。
 
-不绑定 Hermes / 某一框架；任意支持 `SKILL.md` 的 Agent 都能用。  
-本仓库**不含**真实用户隐私；`用户画像` 是模板，请自行改写。
+**推荐搭配 [Hermes](https://github.com/NousResearch/hermes-agent) · [OpenClaw](https://docs.openclaw.ai/tools/skills) · Codex** 使用。
 
 交流 / 反馈：**QQ 群 [993579665](https://qm.qq.com/q/7AD2g70HqS)**（[点击加入](https://qm.qq.com/q/7AD2g70HqS)）
 
@@ -38,9 +37,9 @@ agent-expression  →  搜图 / 入库 / 真实路径发出
 | 还会斗图 | suki **+** [agent-expression](https://github.com/yyh-001/agent-expression) |
 | 只要斗图、不要这套人设 | 只要 agent-expression |
 
-装齐后：Suki 用 `search_meme` / `search-meme.py` 拿路径 → Hermes 发 `MEDIA:`，Codex 可用 `--host codex`（详见 [agent-expression hosts](https://github.com/yyh-001/agent-expression/blob/main/references/hosts.md)）。
+装齐后：Hermes 发 `MEDIA:`；Codex 用 `--host codex`；OpenClaw `send_image`（见 [agent-expression hosts](https://github.com/yyh-001/agent-expression/blob/main/references/hosts.md)）。
 
-## 一行安装
+## 推荐平台：Hermes · OpenClaw · Codex
 
 ### Hermes
 
@@ -49,9 +48,9 @@ hermes skills install https://raw.githubusercontent.com/yyh-001/suki/main/SKILL.
 ```
 
 装到 `~/.hermes/skills/persona/suki/`。  
-可选：用本仓 [`SOUL.md`](./SOUL.md) / [`prefill_suki.json`](./prefill_suki.json) 接到 Hermes 人格，然后重启 gateway。
+可选：[`SOUL.md`](./SOUL.md) / [`prefill_suki.json`](./prefill_suki.json) 接到 Hermes 人格，然后重启 gateway。
 
-需要斗图时再装表情包（精简预置包约 2.5MB，用脚本/Git，不要只装 SKILL.md URL）：
+斗图（可选）：
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/yyh-001/agent-expression/main/install.sh | bash -s -- --hermes
@@ -61,36 +60,36 @@ curl -fsSL https://raw.githubusercontent.com/yyh-001/agent-expression/main/insta
 
 ```bash
 openclaw skills install @yyh-001/suki
-# 或：
-clawhub install suki
+openclaw skills install @yyh-001/suki --global
 ```
 
-装完请新开会话。斗图另装 [agent-expression](https://github.com/yyh-001/agent-expression)（`openclaw skills install @yyh-001/agent-expression`，要图包用 Git / `install.sh`）。
+装完新开会话。斗图：`openclaw skills install @yyh-001/agent-expression`（图包用 Git / `install.sh`）。
+
+### Codex
+
+```bash
+git clone --depth 1 https://github.com/yyh-001/suki.git ~/.agents/skills/suki
+# 或：curl …/agent-expression/install.sh 同方式装 suki 到 ~/.codex/skills/
+```
+
+斗图装 [agent-expression](https://github.com/yyh-001/agent-expression) 后，检索用 `--host codex`。
+
+---
+
+## 其它安装方式
 
 ### 腾讯 SkillHub（国内）
 
 ```bash
 curl -fsSL https://skillhub.cn/install/install.sh | bash -s -- --cli-only
-skillhub search suki
-skillhub install suki --dir ~/.agents/skills   # 目录按你的 Agent 改
+skillhub install suki --dir ~/.openclaw/skills   # 或 ~/.hermes/skills 等
 ```
-
-可在 [skillhub.cn](https://www.skillhub.cn/) 搜索安装。人设包无图片，商店安装即完整；斗图仍需另装 agent-expression（图包走 GitHub）。
 
 ### skills.sh / ClawHub
 
 ```bash
 npx skills add yyh-001/suki
-# 目录页：https://skills.sh/yyh-001/suki
-
 clawhub install suki
-```
-
-### Claude / Codex 等
-
-```bash
-git clone --depth 1 https://github.com/yyh-001/suki.git ~/.agents/skills/suki
-# 或：~/.claude/skills/suki
 ```
 
 **Windows**
