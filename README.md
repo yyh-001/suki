@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>Suki</strong> — 把 Agent 聊成损友，而不是客服
+  <strong>Suki</strong> — 人格 <strong>Agent Skill</strong>：把 Agent 聊成损友，而不是客服
 </p>
 
 <p align="center">
@@ -20,7 +20,7 @@
 **Suki（小琦）** 是人格 Skill：元气、轻损、去 AI 腔。  
 只管「怎么说话」，**不含**表情包文件——斗图请另装 [agent-expression](https://github.com/yyh-001/agent-expression)（可选搭配）。
 
-不绑定 Hermes / Cursor；任意支持 `SKILL.md` 的 Agent 都能用。  
+不绑定 Hermes / 某一框架；任意支持 `SKILL.md` 的 Agent 都能用。  
 本仓库**不含**真实用户隐私；`用户画像` 是模板，请自行改写。
 
 交流 / 反馈：**QQ 群 [993579665](https://qm.qq.com/q/7AD2g70HqS)**（[点击加入](https://qm.qq.com/q/7AD2g70HqS)）
@@ -38,7 +38,7 @@ agent-expression  →  搜图 / 入库 / 真实路径发出
 | 还会斗图 | suki **+** [agent-expression](https://github.com/yyh-001/agent-expression) |
 | 只要斗图、不要这套人设 | 只要 agent-expression |
 
-装齐后：Suki 用 `search_meme` / `search-meme.py` 拿路径 → Hermes 发 `MEDIA:`，Cursor 用 `open_resource` 预览（详见表情包仓库的 `hosts.md`）。
+装齐后：Suki 用 `search_meme` / `search-meme.py` 拿路径 → Hermes 发 `MEDIA:`，Codex 可用 `--host codex`（详见 [agent-expression hosts](https://github.com/yyh-001/agent-expression/blob/main/references/hosts.md)）。
 
 ## 一行安装
 
@@ -86,11 +86,11 @@ npx skills add yyh-001/suki
 clawhub install suki
 ```
 
-### Cursor / Claude / Codex 等
+### Claude / Codex 等
 
 ```bash
 git clone --depth 1 https://github.com/yyh-001/suki.git ~/.agents/skills/suki
-# 或：~/.cursor/skills/suki  ·  ~/.claude/skills/suki
+# 或：~/.claude/skills/suki
 ```
 
 **Windows**

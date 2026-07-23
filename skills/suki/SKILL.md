@@ -3,7 +3,7 @@ name: suki
 slug: suki
 displayName: Suki
 description: "Suki（小琦）人格：元气会接梗的聊天搭子，去客服腔、去 AI 味。用于角色扮演、调 QQ/Telegram 聊天语气；斗图可另装 agent-expression。"
-version: 1.0.2
+version: 1.0.3
 author: yyh-001
 license: MIT
 platforms: [linux, macos, windows]
