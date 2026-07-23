@@ -18,24 +18,31 @@
 ---
 
 **Suki（小琦）** 是人格 Skill：元气、轻损、去 AI 腔。  
-只管「怎么说话」，**不含**表情包——斗图请另装 [agent-expression](https://github.com/yyh-001/agent-expression)。
+只管「怎么说话」，**不含**表情包与主动调度——完整体验推荐：
 
-**推荐搭配 [Hermes](https://github.com/NousResearch/hermes-agent) · [OpenClaw](https://docs.openclaw.ai/tools/skills) · Codex** 使用。
+**[agent-expression](https://github.com/yyh-001/agent-expression)**（斗图）+ **[agent-emotion](https://github.com/yyh-001/agent-emotion)**（内心 / 主动找聊）+ **suki**（语气）
+
+**推荐运行在 [Hermes](https://github.com/NousResearch/hermes-agent) · [OpenClaw](https://docs.openclaw.ai/tools/skills) · Codex**。
 
 交流 / 反馈：**QQ 群 [993579665](https://qm.qq.com/q/7AD2g70HqS)**（[点击加入](https://qm.qq.com/q/7AD2g70HqS)）
 
-## 和表情包的关系
+## 和配套 Skill 的关系
 
 ```text
 suki              →  人设 / 语气 / 去 AI
 agent-expression  →  搜图 / 入库 / 真实路径发出
+agent-emotion     →  情绪演化 / 泊松门控 / 何时主动找聊
 ```
 
 | 你想要 | 装什么 |
 |--------|--------|
 | 只改聊天口气 | **只要 suki** |
-| 还会斗图 | suki **+** [agent-expression](https://github.com/yyh-001/agent-expression) |
-| 只要斗图、不要这套人设 | 只要 agent-expression |
+| 还会斗图 | suki + [agent-expression](https://github.com/yyh-001/agent-expression) |
+| 还会主动找聊、有「内心」 | suki + [agent-emotion](https://github.com/yyh-001/agent-emotion) |
+| **完整搭子体验（推荐）** | suki + agent-expression + agent-emotion |
+| 只要斗图 / 只要调度 | 各装各的，不必绑 suki |
+
+三者独立、可选搭配：`agent-emotion` 不绑人设，接在 Hermes cron 或任意能跑脚本的宿主即可。
 
 装齐后：Hermes 发 `MEDIA:`；Codex 用 `--host codex`；OpenClaw `send_image`（见 [agent-expression hosts](https://github.com/yyh-001/agent-expression/blob/main/references/hosts.md)）。
 
@@ -50,11 +57,14 @@ hermes skills install https://raw.githubusercontent.com/yyh-001/suki/main/SKILL.
 装到 `~/.hermes/skills/persona/suki/`。  
 可选：[`SOUL.md`](./SOUL.md) / [`prefill_suki.json`](./prefill_suki.json) 接到 Hermes 人格，然后重启 gateway。
 
-斗图（可选）：
+可选配套（推荐三件套）：
 
 ```bash
+# 斗图
 curl -fsSL https://raw.githubusercontent.com/yyh-001/agent-expression/main/install.sh | bash -s -- --hermes
 ```
+
+主动 / 内心：按 [agent-emotion](https://github.com/yyh-001/agent-emotion#hermes-安装) 接到 Hermes cron。
 
 ### OpenClaw（龙虾）
 
